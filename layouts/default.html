@@ -1,0 +1,169 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title><%= @item[:title] %></title>
+		<meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+		<meta http-equiv="imagetoolbar" content="no" />
+                <meta charset="utf-8">
+		<meta name="distribution" content="all" />
+		<meta name="robots" content="all" />	
+		<meta name="resource-type" content="document" />
+		<meta name="Keywords" content="" />
+		<meta name="MSSmartTagsPreventParsing" content="true" />
+                <meta name="generator" content="nanoc <%= Nanoc::VERSION %>"> 
+    <!-- <link href="/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" media="screen" /> -->
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"/>     
+    <link href="/stylesheets/patch.css" rel="stylesheet" type="text/css" media="screen" />      
+    <link href="/stylesheets/all.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="js/query.js"></script> 
+    <!-- <script src="/js/bootstrap.min.js"></script>  -->  
+    <script src="/js/all.js" type="text/javascript"></script>
+    <script src="/js/load.js" type="text/javascript"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+	</head>
+<body>
+
+<div class="topbar">
+  <div class="fill">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                 <li>
+                 <a style="color:#5CB3FF" href="/">tkee.org</a>
+                </li>
+                <%= menu_item('About', '/about/')%>
+                <%= menu_item('Projects', '/projects/')%>
+                <%= menu_item('Tutorials', '/tutorials/')%>
+                <%= menu_item('FAQ', '/faq/')%>
+                <li><a href="http://blog.tkee.org/">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--
+  <div class="topbar">
+  <div class="fill">
+    <div class="container fixed">
+                <div class="dropdown">
+      <h3><a href="/">tkee.org</a></h3>
+
+
+      <ul>
+
+
+
+          <%= menu_item('About', '/about/')%>
+          <%= menu_item('Projects', '/projects/')%>
+
+          <%= menu_item('Tutorials', '/tutorials/')%>
+          <%= menu_item('FAQ', '/faq/')%>
+          <li><a href="http://blog.tkee.org/">Blog</a></li>
+
+          <li>
+      </ul>
+      <form class="navbar-search pull-right">
+        <input type="text" class="search-query" placeholder="Search">
+      </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+ 
+  <div class="container">
+  
+    
+<div class="first-unit"/>
+
+<div class="page-header">
+    <h1><%= @item[:title] %></h1>
+    <p><%= @item[:tldr] %></p>
+</div>
+
+      <div id="main">
+      
+      <%= yield %>
+      <p>Tags: <%= tags %></p>
+    </div>
+  
+  <hr/>
+
+  <!-- }}  -->
+
+
+
+    </div> 
+
+<!--
+      <div id="footer">
+      <div class="inner">
+
+        <div class="container">
+          <p>
+              <a href="http://en.wikipedia.org/wiki/MIT_License">Copyright</a> &copy; 2013 - <a href="http://twitter.com/kgdesouz">@kgdesouz</a>         
+            <% if @item[:author] %>
+                - page written by <%= @item[:author] %>.
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </div> -->
+
+<footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            <h6>Disclaimer</h6>
+            <p>
+              This blog is strictly personal, the posts on this site are my own and don't necessarily represent current or past employer's positions, strategies or opinions.
+            </p>
+          </div>
+          <div class="span2">
+            <h6>Blog Links:</h6>
+            <ul class="unstyled">
+              <li><a href="" title="">B.Kraft</a></li>
+            </ul>
+          </div>
+          <div class="span2">
+            <h6>Social Media</h6>
+            <ul class="unstyled">
+              <li><a href="https://github.com/kgdesouz" title="Github In Profile">
+                <i class="icon-github"></i>Github</a>
+              </li>
+            </ul>
+          </div>
+          <div class="span3">
+            <h6>License</h6>
+            <p>
+              &copy; Copyright 2013 -             <% if @item[:author] %>
+                - page written by <%= @item[:author] %>.
+            <% end %>  <br/>
+              <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/lu/">
+                <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/lu/80x15.png" />
+              </a>
+              This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">work</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/lu/">Creative Commons Attribution NonCommercial ShareAlike 3.0 Luxembourg License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- /container -->	
+</body>
+</html>
+

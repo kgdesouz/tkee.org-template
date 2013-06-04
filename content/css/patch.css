@@ -1,0 +1,24 @@
+div.login-unit {
+  margin-top: 160px;
+  margin-bottom: 30px;
+
+}
+div.first-unit {
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+}
+
+div.hero-unit {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.prices { font-weight: bold; }
+.prices #product-details .prices { font-size: 1.25em; }
+.price.selling { font-weight: bold; color: #2e6ab1; }
+#product-details .price.selling { font-size: 1.5em; }
+
+.screenshot { 
+  padding-left: 40px;
+}
